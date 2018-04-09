@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="${jdbc_url}"/>
+        <property name="username" value="${jdbc_username}"/>
+        <property name="password" ref="${jdbc_password}"/>
+        <property name="driverClassName" value="${jdbc_driverClassName}"/>
+
+         &lt;!&ndash;配置初始化大小、最小、最大 &ndash;&gt;
+        <property name="initialSize" value="${jdbc_initialSize}"/>
+        <property name="minIdle" value="${jdbc_minIdle}"/>
+        <property name="maxActive" value="${jdbc_maxActive}"/>
+
+        &lt;!&ndash; 配置获取连接等待超时的时间 &ndash;&gt;
+        <property name="maxWait" value="${jdbc_maxWait}"/>
+
+        &lt;!&ndash; 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 &ndash;&gt;
+        <property name="timeBetweenEvictionRunsMillis" value="${jdbc_timeBetweenEvictionRunsMillis}"/>
+
+        &lt;!&ndash; 配置一个连接在池中最小生存的时间，单位是毫秒 &ndash;&gt;
+        <property name="minEvictableIdleTimeMillis" value="${jdbc_minEvictableIdleTimeMillis}"/>
+        <property name="removeAbandoned" value="true"/>  &lt;!&ndash; 是否自动回收超时连接 &ndash;&gt;
+        <property name="removeAbandonedTimeout" value="${jdbc_maxWait}"/> &lt;!&ndash; 超时时间(以秒数为单位) &ndash;&gt;
+        <property name="testWhileIdle" value="${jdbc_testWhileIdle}"/>
+        <property name="testOnBorrow" value="${jdbc_testOnBorrow}"/>
+        <property name="testOnReturn" value="${jdbc_testOnReturn}"/>
+        <property name="validationQuery" value="${jdbc_validationQuery}"/>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        &lt;!&ndash; mybatis配置文件的位置 &ndash;&gt;
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+        &lt;!&ndash; Mapper XML的位置 &ndash;&gt;
+        <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"/>
+    </bean>
+    &lt;!&ndash; DAO接口的包路径 &ndash;&gt;
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com"/>
+    </bean>
+
+    &lt;!&ndash;spring对JDBC的封装&ndash;&gt;
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager" />-->
+</beans>
