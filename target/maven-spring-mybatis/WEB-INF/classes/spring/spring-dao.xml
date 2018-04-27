@@ -10,10 +10,10 @@
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="url" value="${jdbc_url}"/>
         <property name="username" value="${jdbc_username}"/>
-        <property name="password" value="${jdbc_password}"/>
+        <property name="password" ref="${jdbc_password}"/>
         <property name="driverClassName" value="${jdbc_driverClassName}"/>
 
-        <!--配置初始化大小、最小、最大 -->
+         <!--配置初始化大小、最小、最大 -->
         <property name="initialSize" value="${jdbc_initialSize}"/>
         <property name="minIdle" value="${jdbc_minIdle}"/>
         <property name="maxActive" value="${jdbc_maxActive}"/>
@@ -40,17 +40,15 @@
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
         <!-- Mapper XML的位置 -->
         <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"/>
-        <property name="typeAliasesPackage" value="com.bole.model"/>
     </bean>
-
     <!-- DAO接口的包路径 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.bole.dao"/>
+        <property name="basePackage" value="com"/>
     </bean>
 
+    <!--spring对JDBC的封装-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-
     <tx:annotation-driven transaction-manager="transactionManager" />
 </beans>

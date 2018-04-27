@@ -1,0 +1,9 @@
+SET NAMES utf8mb4;
+CREATE DATABASE bole;
+
+SET NAMES utf8mb4;
+CREATE TABLE test (
+  id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+  content varchar(50) NOT NULL DEFAULT '' COMMENT '测试内容',
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='test表';
