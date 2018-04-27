@@ -40,12 +40,12 @@
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
         <!-- Mapper XML的位置 -->
         <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"/>
-        <property name="typeAliasesPackage" value="com.bole.model"/>
+        <property name="typeAliasesPackage" value="com.model"/>
     </bean>
 
     <!-- DAO接口的包路径 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.bole.dao"/>
+        <property name="basePackage" value="com.dao"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
